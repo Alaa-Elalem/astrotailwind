@@ -1,0 +1,122 @@
+---
+import { Icon } from 'astro-icon'
+
+const features = [
+  {
+    name: 'حوالة تك',
+    description:
+      'هذه الخدمة خاصة بتحويل الاموال حول العالم وبجميع العملات سواء كانت حوالة شخصية في الحساب او استلام باليد وكذالك سداد جميع الفواتير (سويفت) والايداعات البنكية .و سنكون بعون الله الافضل والاسرع والاقل تكلفة',
+    icon: 'sparkles',
+  },
+  {
+    name: ' بطاقة تك',
+    description:
+      'هي خدمة تتيح لك اقتناء مجموعة من البطاقات الالكترونية مثل البطاقات الافتراضية من ماستركارد و فيزا لتتمكن من سداد جميع مشترياتك من انحاء العالم وايضا تحتوي هذه الخدمة على مجموعة واسعة من بطاقات الالعاب والتطبيقات من المواقع العالمية',
+    icon: 'puzzle',
+  },
+
+  {
+    name: 'كرتك',
+    description: 'هذه الخدمة خاصة بكروت  التطبيقات وكروت الالعاب',
+    icon: 'clock',
+  },
+  {
+    name: 'برمجة تك',
+    description:
+      'هذه الخدمة خاصة بتصميم المواقع الشخصية والتجارية حيث يمكننا توفير خدمات متنوعة من خلال الموقع المرغوب بتصميمه فيمكن ربطه بالمبيعات والمنظومات الداخلية للشركات التجارية',
+    icon: 'clock',
+  },
+  {
+    name: 'تطبيقاتك',
+    description:
+      'هذه الخدمة خاصة بتصميم التطبيقات العاملة على منصات اندرويد و اي او اس وغيرها المصممة خصصيصا للهواتف النقالة',
+    icon: 'clock',
+  },
+]
+---
+
+<div class="py-12 bg-white-100 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <!-- <h2
+        class="text-base text-purple-800 dark:text-purple-300 font-semibold tracking-wide uppercase"
+      >
+        Features
+      </h2> -->
+      <p
+        class="mt-6 text-3xl leading-8 border-b-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
+      >
+        خدماتنا
+      </p>
+      <!-- <p
+        class="mt-4 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto"
+      >
+        This is a good starting point for a multi-purpose website, including
+        support for documentation and blog pages, photo galleries, diagrams,
+        math equations and more.
+      </p> -->
+    </div>
+
+    <div class="mt-10">
+      <dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+        {
+          features.map((feature) => (
+            <div class="relative">
+              <dt>
+                <div class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-purple-500 text-white dark:bg-purple-400 dark:text-black">
+                  <Icon
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    pack="heroicons-outline"
+                    name={feature.icon}
+                  />
+                </div>
+                <p class=" mx-16 my-6 ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+                  {feature.name}
+                </p>
+              </dt>
+              <dd class="mt-2 ml-16 text-base text-gray-600 dark:text-gray-400">
+                {feature.description}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+  <div class="text-center bg-slate-100">
+    <p
+      class="mt-8 py-6 text-3xl leading-8 font-extrabold border-b-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
+    >
+      اعمالنا
+    </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <dl
+        class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+      >
+        {
+          features.map(feature => (
+            <div class="relative">
+              <dt>
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 dark:bg-purple-400 text-white dark:text-black">
+                  <Icon
+                    class="h-6 w-6"
+                    aria-hidden="true"
+                    pack="heroicons-outline"
+                    name={feature.icon}
+                  />
+                </div>
+                <p class=" mx-16 my-6 ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+                  {feature.name}
+                </p>
+              </dt>
+              <dd class="ml-16 mt-2 text-base text-gray-600 dark:text-gray-400">
+                {feature.description}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</div>
