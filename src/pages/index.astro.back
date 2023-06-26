@@ -45,7 +45,7 @@ import { Logo } from "../config";
               class="flex-1 flex items-center lg:items-stretch justify-start"
             >
               <div class="flex-shrink-0 flex items-center">
-                <img
+                <Img
                   src={Logo}
                   height="10"
                   width="10"
