@@ -1,7 +1,5 @@
 ---
-import { FeaturedSVG } from "../config";
-import { Image } from "astro:assets";
-import Img from "./img.astro";
+import { LogoImage } from "../config";
 ---
 
 <main>
@@ -12,7 +10,7 @@ import Img from "./img.astro";
       <div class="items-center dark:text-gray-900">
         <img
           class="mx-auto flex justify-center items-center h-20 w-auto"
-          src="../images/svg/darahem/darahem.svg"
+          src={LogoImage.src}
           alt="دراهم"
         />
         <div
@@ -30,7 +28,7 @@ import Img from "./img.astro";
     <div class="mx-auto border-t-4 text-white md:w-1/2 lg:w-full">
       <img
         class="mx-auto flex justify-center"
-        src="../images/svg/darahem/herepbg.svg"
+        src="../assets/svg/darahem/herepbg.svg"
         alt="دراهم"
       />
     </div>
