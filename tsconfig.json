@@ -19,7 +19,11 @@
     "skipLibCheck": true,
     // Add alias for assets folder for easy reference to assets
     // "baseUrl": ".",
-
+    "paths": {
+      "photoswipe/lightbox": [
+        "./node_modules/photoswipe/dist/types/lightbox/lightbox.d.ts"
+      ]
+    },
     // Allow JavaScript files to be imported
     "allowJs": true
   }

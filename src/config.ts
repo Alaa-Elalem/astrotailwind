@@ -77,8 +77,8 @@ export const SiteMetadata = {
 // export const DefaultImage = "./assets/undraw/undraw_my_feed.png";
 
 export { default as Logo } from "./assets/favicon.svg";
-export { default as LogoImage } from "./assets/astro/astro-logo-dark.png";
-export { default as FeaturedSVG } from "./assets/svg/undraw/undraw_design_inspiration.svg";
+export { default as LogoImage } from "./assets/svg/darahem/darahem.svg";
+export { default as FeaturedSVG } from "./assets/svg/darahem/herepbg.svg";
 export { default as DefaultSVG } from "./assets/svg/undraw/undraw_my_feed.svg";
 export { default as DefaultImage } from "./assets/undraw/undraw_my_feed.png";
 
@@ -94,6 +94,7 @@ export const footerLinks = [
   { name: "من نحن", href: "" },
   { name: "خدماتنا", href: "about" },
   { name: "اتصل بنا", href: "contact" },
+  { name: " أعمالنا", href: "" },
 ];
 
 export const CategoryDetail = [
