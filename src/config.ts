@@ -40,11 +40,11 @@ export const SiteMetadata = {
       link: "091-6656699",
       icon: "telephone",
     },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/hellothamcom",
-      icon: "linkedin",
-    },
+    // {
+    //   name: "LinkedIn",
+    //   link: "https://www.linkedin.com/hellothamcom",
+    //   icon: "linkedin",
+    // },
     {
       name: "Facebook",
       link: "https://www.facebook.com/profile.php?id=100088916312958",
@@ -52,7 +52,7 @@ export const SiteMetadata = {
     },
     {
       name: "Instagram",
-      link: "https://www.instagram.com/hellothamcom",
+      link: "https://www.instagram.com/darahem.ly/",
       icon: "instagram",
     },
     {
@@ -60,11 +60,11 @@ export const SiteMetadata = {
       link: "https://twitter.com/hellothamcom",
       icon: "twitter",
     },
-    {
-      name: "Github",
-      link: "https://github.com/hellothamcom",
-      icon: "github",
-    },
+    // {
+    //   name: "Github",
+    //   link: "https://github.com/hellothamcom",
+    //   icon: "github",
+    // },
   ],
   buildTime: new Date(),
 };

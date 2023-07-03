@@ -62,7 +62,7 @@ const social = await getCollection("social");
         social.map((s) =>
           s.data.link ? (
             <a
-              href="#"
+              href={s.data.link}
               class="ml-3 text-[#f0c986] hover:text-blue-600 dark:text-[#f0c986 dark:hover:text-blue-300"
               rel="noopener noreferrer"
               target="_blank"
@@ -99,6 +99,25 @@ const social = await getCollection("social");
             Hello Tham Pty Ltd
           </a>
         </p> -->
+      </span>
+      <span class="max-md:hidden inline-flex lg:m-auto space-x-4 items-end">
+        {
+          social.map((s) =>
+            s.data.link ? (
+              <a
+                href={s.data.link}
+                class="ml-3 text-[#f0c986] hover:text-blue-600 dark:text-[#f0c986 dark:hover:text-blue-300"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Icon pack="bi" name={s.data.icon} class=" h-5 w-5" />
+                <span class="sr-only">{s.data.name}</span>
+              </a>
+            ) : (
+              ""
+            )
+          )
+        }
       </span>
     </div>
   </div>
