@@ -35,21 +35,21 @@ const features = [
 
 const jobs = [
   {
-    name: "عقاري",
-    description: "موقع متخصص بالعقار",
+    name: "موقع",
+    logolink: "موقع متخصص بالعقار",
     icon: "sparkles",
     link: "https://libyashoes.ly/",
   },
   {
-    name: "ليبياشوز",
-    description: "موقع متخصص ببيع الاحدية",
+    name: "متجر",
+    logolink: "موقع متخصص ببيع الاحدية",
     icon: "puzzle",
     link: "https://libyashoes.ly/",
   },
 
   {
-    name: "تطبيق دراهم",
-    description: "تطبيق مهتم باّخر اسعار العملات والمعادن",
+    name: "تطبيق ",
+    logolink: "تطبيق مهتم باّخر اسعار العملات والمعادن",
     icon: "clock",
     link: "https://play.google.com/store/apps/details?id=com.darahem.kart&hl=ar&gl=US",
   },
@@ -86,22 +86,22 @@ const jobs = [
         <!-- <div class="menu-container"> -->
         {
           features.map((feature) => (
-            <div
-              class="menu"
-              data-name={feature.pop}
-              class=" bg-white rounded-xl shadow-lg  h-14  p-4"
-            >
-              <div class="absolute flex h-12 w-12 items-center  justify-center rounded-md bg-[#0f3548] text-[#f0c986] dark:bg-purple-400 dark:text-black">
-                <Icon
-                  class="h-6 w-6"
-                  aria-hidden="true"
-                  pack="heroicons-outline"
-                  name={feature.icon}
-                />
+            <div>
+              <div class="menu" data-name={feature.pop}>
+                <div class=" bg-white rounded-xl h-16 shadow-lg m-2 p-2">
+                  <div class="absolute flex h-12 w-12 items-center  justify-center rounded-md bg-[#0f3548] text-[#f0c986] dark:bg-purple-400 dark:text-black">
+                    <Icon
+                      class="h-6 w-6"
+                      aria-hidden="true"
+                      pack="heroicons-outline"
+                      name={feature.icon}
+                    />
+                  </div>
+                  <p class=" mx-auto  flex  justify-center  items-center text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+                    {feature.name}
+                  </p>
+                </div>
               </div>
-              <p class=" mx-auto  flex  justify-center  items-center text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
-                {feature.name}
-              </p>
             </div>
           ))
         }
@@ -132,19 +132,19 @@ const jobs = [
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <div class="absolute flex h-12 w-12 mr-2 items-center  justify-center rounded-md bg-[#0f3548] text-[#f0c986] dark:bg-purple-400 dark:text-black">
+                      <p class=" m-auto  text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+                        {job.name}
+                      </p>
+                      <div class=" mx-auto flex h-12 w-12 items-center  justify-center rounded-md bg-[#0f3548] text-[#f0c986] dark:bg-purple-400 dark:text-black">
                         <Icon
-                          class="h-6 w-6 absolute flex items-center justify-center   m-4 text-[#f0c986] dark:text-gray-200"
+                          class="mx-auto h-6 w-6  flex items-center justify-center   text-[#f0c986] dark:text-gray-200"
                           aria-hidden="true"
                           pack="heroicons-outline"
                           name={job.icon}
                         />
                       </div>
-                      <p class=" m-auto  text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
-                        {job.name}
-                      </p>
-                      <dd class=" flex items-center justify-center  mr-4 mt-2 text-base text-gray-600 dark:text-gray-400">
-                        {job.description}
+                      <dd class="  hidden flex items-center justify-center  mr-4 mt-2 text-base text-gray-600 dark:text-gray-400">
+                        {job.logolink}
                       </dd>
                     </a>
                   </div>
@@ -279,7 +279,7 @@ const jobs = [
   .menu {
     cursor: pointer;
     outline: 0.1rem solid #ccc;
-    outline-offset: -0.3rem;
+    outline-offset: -0.6rem;
     outline-style: dotted;
     background-color: white;
     border-color: #333;
@@ -287,13 +287,13 @@ const jobs = [
   }
   .menu:hover {
     transform: scale(1.1);
-    outline-offset: 0;
+    outline-offset: 1rem;
     outline: 0.1rem solid gold;
   }
   .fa-xmark1 {
     position: absolute;
     top: -15px;
-    right: 15px;
+    right: -15px;
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -346,7 +346,7 @@ const jobs = [
     max-width: 400px;
     background: #fff;
     border-radius: 10;
-    position: sticky;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
