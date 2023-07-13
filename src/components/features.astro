@@ -36,21 +36,21 @@ const features = [
 const jobs = [
   {
     name: "موقع",
-    logolink: "موقع متخصص بالعقار",
-    icon: "sparkles",
+    logolink: "/assets/aqari.png",
+    icon: "logos:facebook",
     link: "https://libyashoes.ly/",
   },
   {
     name: "متجر",
-    logolink: "موقع متخصص ببيع الاحدية",
-    icon: "puzzle",
+    logolink: "/assets/libyashoo.png",
+    icon: "cib:tiktok",
     link: "https://libyashoes.ly/",
   },
 
   {
     name: "تطبيق ",
-    logolink: "تطبيق مهتم باّخر اسعار العملات والمعادن",
-    icon: "clock",
+    logolink: "/assets/official.jpeg",
+    icon: "darahem",
     link: "https://play.google.com/store/apps/details?id=com.darahem.kart&hl=ar&gl=US",
   },
 ];
@@ -109,7 +109,7 @@ const jobs = [
       </dl>
     </div>
   </div>
-  <div class="text-center bg-slate-100">
+  <div class="text-center bg-slate-100 dark:bg-gray-800">
     <p
       id="jobs"
       class="mt-8 py-6 text-3xl leading-8 font-extrabold border-b-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
@@ -125,25 +125,23 @@ const jobs = [
             jobs.map((job) => (
               <div>
                 <div class=" bg-white rounded-xl shadow-lg m-2 p-2">
-                  <div class="menu">
+                  <div>
                     <a
                       href={job.link}
                       class="ml-3 text-[#f0c986]  py-4  bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-[#f0c986 dark:hover:text-blue-300"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <p class=" m-auto  text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+                      <p class=" m-auto  text-lg leading-6  font-bold text-gray-900 dark:text-[#f0c986]">
                         {job.name}
                       </p>
-                      <div class=" mx-auto flex h-12 w-12 items-center  justify-center rounded-md bg-[#0f3548] text-[#f0c986] dark:bg-purple-400 dark:text-black">
-                        <Icon
-                          class="mx-auto h-6 w-6  flex items-center justify-center   text-[#f0c986] dark:text-gray-200"
-                          aria-hidden="true"
-                          pack="heroicons-outline"
-                          name={job.icon}
+                      <div class=" mx-auto flex h-24 w-24 items-center  justify-center">
+                        <img
+                          class="mx-auto h-22 w-22  flex items-center justify-center "
+                          src={job.logolink}
                         />
                       </div>
-                      <dd class="  hidden flex items-center justify-center  mr-4 mt-2 text-base text-gray-600 dark:text-gray-400">
+                      <dd class="  hidden  items-center justify-center  mr-4 mt-2 text-base text-gray-600 dark:text-gray-400">
                         {job.logolink}
                       </dd>
                     </a>
