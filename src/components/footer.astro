@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon";
 import { Logo } from "../config";
+import About from "./about.astro";
 
 const social = await getCollection("social");
 ---
@@ -12,16 +13,18 @@ const social = await getCollection("social");
     class="fixed z-20 bottom-0 inset-x-0 bg-primary 48 dark:bg-gray-800 px-4 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between lg:flex-col flex-col border-t-2 border-secondary dark:border-secondary"
   >
     <span class="flex justify-between flex-row w-5/6">
-      <p
-        class="flex justify-between text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 dark:lg:border-secondary lg:py-1"
-      >
-        <a
-          href="#about"
-          class="ml-1 text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+      <div class="menuf" data-name="f-1">
+        <p
+          class="flex justify-between text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 dark:lg:border-secondary lg:py-1"
         >
-          من نحن
-        </a>
-      </p>
+          <a
+            href="#about"
+            class="ml-1 text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+          >
+            من نحن
+          </a>
+        </p>
+      </div>
       <p class="ml-4 py-1 pl-4 text-sm text-gray-600">
         <a
           href="#serv"
@@ -58,7 +61,7 @@ const social = await getCollection("social");
         class="ml-4 border-purple-300 py-1 pl-4 text-sm text-gray-600 dark:text-gray-300"
       >
         <a
-          href={import.meta.env.BASE_URL + "privacy-policy"}
+          href={import.meta.env.BASE_URL + "terms"}
           class="ml-1 text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
@@ -133,4 +136,47 @@ const social = await getCollection("social");
       </span>
     </div>
   </div>
+  <script is:inline>
+    const aboutus = [
+      {
+        name: "من نحن",
+        description:
+          "نحن هنا لنساعدك في تطوير اعمالك وتوسيع التجارة نوصلك لاهدافك بايسر الطرق واسرعها نؤمِن لك التعامل مع كل الاطراف الذين ترغب في اتمام الصفقات والتواصل  معهم نضعك على خارطة العالم للتعريف باعمالك وتنميتها وتطويرها.",
+        pop: "f-1",
+      },
+    ];
+    document.querySelectorAll(" .menuf").forEach((product) => {
+      product.onclick = () => {
+        // preveiwMenue.style.display = "flex";
+        let Overlay = document.createElement("div");
+        Overlay.className = "menu-preview1";
+        document.body.appendChild(Overlay);
+        let popupbox = document.createElement("div");
+        popupbox.className = "preview1";
+
+        let name = product.getAttribute("data-name");
+        aboutus.map((about) => {
+          if (about.pop == name) {
+            let popparagraph = document.createElement("h3");
+            let partext = document.createTextNode(about.description);
+            popparagraph.appendChild(partext);
+            popupbox.appendChild(popparagraph);
+            document.body.appendChild(popupbox);
+          }
+        });
+
+        let closeB = document.createElement("span");
+        closeB.className = "fa-xmark1";
+        let closeBtext = document.createTextNode("x");
+        closeB.appendChild(closeBtext);
+        popupbox.appendChild(closeB);
+      };
+    });
+    document.addEventListener("click", function (e) {
+      if (e.target.className == "fa-xmark1") {
+        e.target.parentNode.remove();
+        document.querySelector(".menu-preview1").remove();
+      }
+    });
+  </script>
 </footer>

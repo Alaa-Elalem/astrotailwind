@@ -10,7 +10,8 @@ export interface TagType {
 
 export const SiteMetadata = {
   title: "شركة دراهم للوساطة و التجارة الالكترونية",
-  description: "An Astro starter for corporate/marketing/blog websites.",
+  description:
+    "شركة متخصصة في التجارة الالكترونية وقي تطوير بيئة عمل المواقع وتطبيقات الجوال",
   author: {
     name: "Chris Tham",
     twitter: "@chris1tham",
@@ -26,7 +27,7 @@ export const SiteMetadata = {
     summary:
       "Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.",
   },
-  location: "Rivendell, Middle Earth",
+  location: "طرابلس ليبيا",
   latlng: [-33.86785, 151.20732] as [number, number],
   repository: "https://github.com/hellotham/hello-astro",
   social: [
@@ -87,6 +88,7 @@ export const NavigationLinks = [
   { name: "خدماتنا", href: "about" },
   { name: "تواصل معنا", href: "contact" },
   { name: "لماذا نحن", href: "blog" },
+  { name: "طرق الدفع", href: "doc/introduction" },
   { name: "طرق الدفع", href: "doc/introduction" },
 ];
 
