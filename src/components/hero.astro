@@ -4,7 +4,7 @@ import { LogoImage, FeaturedSVG } from "../config";
 
 <main>
   <div
-    class="container mx-auto max-w-7xl flex flex-col space-x-10 md:flex-row bg-white dark:bg-primary"
+    class="container mx-auto max-w-7xl flex flex-col space-x-10 md:flex-row bg-white"
   >
     <div class="mx-auto md:w-1/2 lg:w-full flex justify-center">
       <div class="flex justify-center items-center dark:text-gray-900">
@@ -138,9 +138,6 @@ import { LogoImage, FeaturedSVG } from "../config";
   </div>
 </main>
 <style is:global>
-  svg {
-  }
-  /* .cls-1 { */
   #Layer_1 {
     fill: navy;
     stroke: gold;
@@ -162,6 +159,10 @@ import { LogoImage, FeaturedSVG } from "../config";
       stroke: #0f3548;
       fill: #0f3548;
     }
+  }
+
+  .dark svg text {
+    stroke: gold;
   }
   svg text {
     /* text-transform: uppercase; */
