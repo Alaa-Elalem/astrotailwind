@@ -10,12 +10,12 @@ const social = await getCollection("social");
 <div class="h-24 md:h-36"></div>
 <footer class="whitespace-nowrap text-gray-600 dark:text-gray-400">
   <div
-    class="fixed z-20 bottom-0 inset-x-0 bg-primary 48 dark:bg-gray-800 px-4 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between lg:flex-col flex-col border-t-2 border-secondary dark:border-secondary"
+    class="md:fixed z-20 md:bottom-0 md:inset-x-0 bg-primary dark:bg-gray-800 px-1 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between lg:flex-col flex-col border-t-2 border-secondary dark:border-secondary"
   >
-    <span class="flex justify-between flex-row w-5/6">
+    <span class="flex justify-between flex-row">
       <div class="menuf" data-name="f-1">
         <p
-          class="flex justify-between text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 dark:lg:border-secondary lg:py-1"
+          class="flex justify-between text-sm text-gray-600 dark:text-gray-300 sm:ml-1 sm:py-1 md:mx-6 md:px-4 lg:mx-4 lg:px-8 dark:lg:border-secondary md:py-1"
         >
           <a
             href="#about"
@@ -25,7 +25,7 @@ const social = await getCollection("social");
           </a>
         </p>
       </div>
-      <p class="ml-4 py-1 pl-4 text-sm text-gray-600">
+      <p class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600">
         <a
           href="#serv"
           class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
@@ -35,7 +35,9 @@ const social = await getCollection("social");
           خدماتنا
         </a>
       </p>
-      <p class="ml-4 py-1 pl-4 text-sm text-gray-600 dark:text-gray-300">
+      <p
+        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+      >
         <a
           href="#jobs"
           class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
@@ -45,7 +47,9 @@ const social = await getCollection("social");
           اعمالنا
         </a>
       </p>
-      <p class="py-1 pl-4 text-sm text-gray-600 dark:text-gray-300">
+      <p
+        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+      >
         <a
           href={import.meta.env.BASE_URL + "sitemap-index.xml"}
           class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
@@ -55,7 +59,9 @@ const social = await getCollection("social");
           اتصل بنا
         </a>
       </p>
-      <p class="py-1 pl-2 text-sm text-gray-600 dark:text-gray-300">
+      <p
+        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+      >
         <a
           href={import.meta.env.BASE_URL + "terms"}
           class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"

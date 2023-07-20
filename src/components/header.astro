@@ -52,6 +52,23 @@ import { Logo } from "../config";
                 alt="Logo"
               />
             </div>
+            <script is:inline>
+              var ua = navigator.userAgent.toLowerCase();
+              var isiPhone = ua.indexOf("iphone") > -1;
+              var isiPad = ua.indexOf("ipad") > -1;
+              var isAndroid = ua.indexOf("android") > -1;
+
+              let isWindows = ua.indexOf("windows") > -1;
+              if (isiPhone == true) {
+                let apple = document.querySelector(".apple");
+                apple.style.display = "flex";
+              }
+            </script>
+            <style is:global>
+              .apple {
+                display: none;
+              }
+            </style>
 
             <div class="lg:hidden flex-row items-center justify-center m-auto">
               <div class="flex flex-row space-x-4">
@@ -67,13 +84,16 @@ import { Logo } from "../config";
                   <Icon name="logos:google-play-icon" class="h-9 w-9" />
                   <span class="sr-only"></span>
                 </a>
-                <a
-                  href="https://apps.apple.com/us/app/%D8%AF%D8%B1%D8%A7%D9%87%D9%85/id6448579250"
-                  class="text-secondary hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
-                >
-                  <Icon name="logos:apple-app-store" class="h-9 w-9" />
-                  <!-- <span class="sr-only"></span> -->
-                </a>
+
+                <div class="apple">
+                  <a
+                    href="https://apps.apple.com/us/app/%D8%AF%D8%B1%D8%A7%D9%87%D9%85/id6448579250"
+                    class="text-secondary hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+                  >
+                    <Icon name="logos:apple-app-store" class="h-9 w-9" />
+                    <!-- <span class="sr-only"></span> -->
+                  </a>
+                </div>
               </div>
             </div>
 
