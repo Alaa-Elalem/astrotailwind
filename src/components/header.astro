@@ -52,38 +52,25 @@ import { Logo } from "../config";
                 alt="Logo"
               />
             </div>
-            <script is:inline>
-              var ua = navigator.userAgent.toLowerCase();
-              var isiPhone = ua.indexOf("iphone") > -1;
-              var isiPad = ua.indexOf("ipad") > -1;
-              var isAndroid = ua.indexOf("android") > -1;
-
-              let isWindows = ua.indexOf("windows") > -1;
-              if (isiPhone == true) {
-                let apple = document.querySelector(".apple");
-                apple.style.display = "flex";
-              }
-            </script>
-            <style is:global>
-              .apple {
-                display: none;
-              }
-            </style>
 
             <div class="lg:hidden flex-row items-center justify-center m-auto">
               <div class="flex flex-row space-x-4">
-                <span
-                  class="flex px-2 mx-2 m font-bold text-base items-center justify-center text-secondary dark:text-secondary"
-                  >حمل تطبيق الاسعار</span
-                >
+                <div class="windowsp">
+                  <span
+                    class="flex px-2 mx-2 m font-bold text-base items-center justify-center text-secondary dark:text-secondary"
+                    >حمل تطبيق الاسعار</span
+                  >
+                </div>
 
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.darahem.kart&hl=ar&gl=US"
-                  class="flex-row items-center text-secondary hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
-                >
-                  <Icon name="logos:google-play-icon" class="h-9 w-9" />
-                  <span class="sr-only"></span>
-                </a>
+                <div class="android">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.darahem.kart&hl=ar&gl=US"
+                    class="flex-row items-center text-secondary hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+                  >
+                    <Icon name="logos:google-play-icon" class="h-9 w-9" />
+                    <span class="sr-only"></span>
+                  </a>
+                </div>
 
                 <div class="apple">
                   <a
@@ -177,3 +164,39 @@ import { Logo } from "../config";
     </div>
   </nav>
 </div>
+<script is:inline>
+  var ua = navigator.userAgent.toLowerCase();
+  var isiPhone = ua.indexOf("iphone") > -1;
+  var isiPad = ua.indexOf("ipad") > -1;
+  var isAndroid = ua.indexOf("android") > -1;
+
+  let isWindows = ua.indexOf("windows") > -1;
+  if (isiPhone == true) {
+    let apple = document.querySelector(".apple");
+    apple.style.display = "block";
+  }
+  if (isAndroid == true) {
+    let android = document.querySelector(".android");
+    android.style.display = "block";
+  }
+  if (isWindows == true) {
+    let windowsp = document.querySelector(".windowsp");
+    windowsp.className = "active";
+    // document.querySelector(".windowsp").classList.add("active");
+  }
+</script>
+
+<style is:global>
+  .apple {
+    display: none;
+  }
+  .android {
+    display: none;
+  }
+  .windowsp {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+</style>
