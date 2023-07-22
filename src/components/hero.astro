@@ -136,17 +136,17 @@ import { LogoImage, FeaturedSVG } from "../config";
     /* fill: none;
     stroke: none; */
     /* stroke-width: 2px; */
-    stroke-dasharray: 394;
-    animation: draw 8s forwards infinite;
-    animation-delay: 2s;
+    stroke-dasharray: 400;
+    animation: draw linear infinite;
+    animation-delay: 1s;
   }
   @keyframes draw {
     0% {
-      stroke-dashoffset: -394;
+      stroke-dashoffset: 390;
       /* stroke: navy; */
-      fill: #ccc;
-      stroke: #ccc;
-      animation-delay: 3s;
+      fill: none;
+      stroke: black;
+      /* animation-delay: 3s; */
     }
 
     /* 5% {
@@ -165,23 +165,18 @@ import { LogoImage, FeaturedSVG } from "../config";
       
       fill: none;
     } */
-    80% {
+    /* 80% {
       stroke-dashoffset: -50;
-      /* fill: #f0c986; */
-      /* stroke: #0f3548;
-      fill: #0f3548; */
-      fill: none;
-    }
-    */ 100% {
+            fill: none;
+    } */
+    100% {
       stroke-dashoffset: 0;
-      /* fill: #f0c986; */
-      /* stroke: #0f3548;
-      fill: #0f3548; */
-      animation-delay: 4s;
+
       text-shadow: 0 0 10px #8f8;
       box-shadow: 0 0 2px #8ff;
       fill: #000;
       stroke: #000;
+      animation-delay: 1s;
     }
   }
 
