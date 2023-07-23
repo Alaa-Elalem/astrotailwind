@@ -15,7 +15,7 @@ import { LogoImage, FeaturedSVG } from "../config";
         /> -->
 
         <div
-          class="mx-6 -mt-4 pb-3 text-center text-base text-gray-600 dark:text-gray-300 sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl lg:mx-0 space-y-5"
+          class="mx-6 -mt-2 pb-3 text-center text-base text-gray-600 dark:text-gray-300 sm:text-lg sm:max-w-xl sm:mx-auto md:text-xl lg:mx-0 space-y-5"
         >
           <!-- <span
             id="about"
@@ -114,20 +114,19 @@ import { LogoImage, FeaturedSVG } from "../config";
 </main>
 <style is:global>
   .cls-1 {
-    /* fill: none;
-    stroke: none; */
-    /* stroke-width: 2px; */
-    stroke-dasharray: 400;
-    animation: draw linear infinite;
-    animation-delay: 1s;
+    fill: black;
+    stroke: black;
+    stroke-dasharray: 395;
+    animation: draw 6s alternate-reverse infinite;
+    /* animation-delay: 2s; */
   }
   @keyframes draw {
     0% {
-      stroke-dashoffset: 390;
+      stroke-dashoffset: -395;
       /* stroke: navy; */
       fill: none;
       stroke: black;
-      /* animation-delay: 3s; */
+      /* animation-delay: 1s; */
     }
 
     /* 5% {
@@ -150,14 +149,35 @@ import { LogoImage, FeaturedSVG } from "../config";
       stroke-dashoffset: -50;
             fill: none;
     } */
-    100% {
-      stroke-dashoffset: 0;
-
-      text-shadow: 0 0 10px #8f8;
+    88% {
+      stroke-dashoffset: 5;
       box-shadow: 0 0 2px #8ff;
-      fill: #000;
       stroke: #000;
+      fill: none;
+    }
+    89% {
+      stroke-dashoffset: 0;
+      stroke: #000;
+      fill: #000;
+      stroke-width: 1px;
+    }
+    90% {
       animation-delay: 1s;
+      stroke: #000;
+      fill: #000;
+      stroke-width: 1px;
+    }
+    91% {
+      animation-delay: 1s;
+      stroke: #000;
+      fill: #000;
+      stroke-width: 1px;
+    }
+    100% {
+      animation-delay: 1s;
+      stroke: #000;
+      fill: #000;
+      stroke-width: px;
     }
   }
 

@@ -87,8 +87,6 @@ export const NavigationLinks = [
   { name: "الصفحة الرئيسية", href: "" },
   { name: "خدماتنا", href: "about" },
   { name: "تواصل معنا", href: "contact" },
-  { name: "لماذا نحن", href: "blog" },
-  { name: "طرق الدفع", href: "doc/introduction" },
   { name: "طرق الدفع", href: "doc/introduction" },
 ];
 

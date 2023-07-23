@@ -7,12 +7,12 @@ import About from "./about.astro";
 const social = await getCollection("social");
 ---
 
-<div class="h-36 md:h-40"></div>
+<div class="md:h-24"></div>
 <footer class="whitespace-nowrap text-gray-600 dark:text-gray-400">
   <div
     class="md:fixed z-20 md:bottom-0 md:inset-x-0 bg-primary dark:bg-gray-800 px-1 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between lg:flex-col flex-col border-t-2 border-secondary dark:border-secondary"
   >
-    <span class="flex justify-between flex-row">
+    <span class="flex justify-between pt-5 flex-row">
       <div class="menuf" data-name="f-1">
         <p
           class="flex justify-between text-sm text-gray-600 dark:text-gray-300 sm:ml-1 sm:py-1 md:mx-6 md:px-4 lg:mx-4 lg:px-8 dark:lg:border-secondary md:py-1"
@@ -73,7 +73,7 @@ const social = await getCollection("social");
       </p>
     </span>
     <span
-      class="flex justify-center space-x-6 md:hidden lg:hidden mt-1 lg:mt-0"
+      class="flex justify-center pt-5 space-x-6 md:hidden lg:hidden mt-1 lg:mt-0"
     >
       {
         social.map((s) =>
@@ -93,9 +93,9 @@ const social = await getCollection("social");
         )
       }
     </span>
-    <span class="max-md:hidden flex-none flex flex-row items-center">
+    <span class="flex-none pt-5 flex flex-row items-center">
       <a
-        class="max-md:hidden flex title-font font-medium items-center lg:justify-start justify-center text-gray-900 dark:text:gray-100"
+        class="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900 dark:text:gray-100"
         href={import.meta.env.BASE_URL}
       >
         <img src={Logo.src} alt="Footer Logo" class="h-10 w-10 rounded-full" />
@@ -104,7 +104,7 @@ const social = await getCollection("social");
     </span>
     <div class="flex-none flex flex-row items-stretch">
       <span
-        class="lg:justify-start text-md text-secondary dark:text-secondary ml-2 pl-2 border-white-300 dark:border-secondary py-1"
+        class="lg:justify-start text-md pt-5 text-secondary dark:text-secondary ml-2 pl-2 border-white-300 dark:border-secondary py-1"
       >
         شركة دراهم للوساطة و التجارة الالكترونية © {new Date().getFullYear()}
         <!-- <a
