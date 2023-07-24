@@ -18,7 +18,7 @@ import { Logo } from "../config";
           <button
             type="button"
             x-on:click="isOpen = !isOpen"
-            class="inline-flex items-center justify-center rounded-md p-2 text-secondary hover:bg-blue-800 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-300 dark:focus:ring-offset-blue-700 focus:ring-blue-500"
+            class="inline-flex items-center justify-center rounded-md p-2 text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-300 dark:focus:ring-offset-blue-700 focus:ring-blue-500"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -136,33 +136,37 @@ import { Logo } from "../config";
       x-transition:enter="transition ease-out duration-100 transform"
       x-transition:enter-start="opacity-0 scale-95"
       x-transition:enter-end="opacity-100 scale-100"
-      x-transition:leave="transition ease-in duration-75 transform"
+      x-transition:leave="transition ease-in duration-5 transform"
       x-transition:leave-start="opacity-100 scale-100"
       x-transition:leave-end="opacity-0 scale-95"
       class="absolute inset-x-0 top-16 z-50"
       id="mobile-menu"
     >
       <div
-        class="px-4 py-2 whitespace-nowrap bg-gray-100 dark:bg-gray-800 font-semibold border-blue-300 dark:border-blue-600 border-t-2 border-b-2 flex justify-center"
+        class="px-4 w-full flex-col py-2 whitespace-nowrap bg-gray-100 dark:bg-gray-800 font-semibold border-blue-300 dark:border-blue-600 border-t-2 border-b-2 justify-center items-center"
       >
         {
           NavigationLinks.map((item) => (
-            <a
-              href={import.meta.env.BASE_URL + item.href}
-              class:list={[
-                item.href.length > 0 && Astro.url.toString().includes(item.href)
-                  ? "bg-blue-200 text-pink-600 dark:bg-blue-800 dark:text-pink-300"
-                  : "text-text-primary hover:bg-secondary hover:text-pink-600 dark:text-blue-200 dark:hover:bg-blue-800 dark:hover:text-pink-300",
-                " px-2",
-              ]}
-              aria-current={
-                item.href.length > 0 && Astro.url.toString().includes(item.href)
-                  ? "page"
-                  : undefined
-              }
-            >
-              {item.name}
-            </a>
+            <div class=" w-full mx-auto flex justify-center items-center">
+              <a
+                href={import.meta.env.BASE_URL + item.href}
+                class:list={[
+                  item.href.length > 0 &&
+                  Astro.url.toString().includes(item.href)
+                    ? "bg-blue-200 text-pink-600 dark:bg-blue-800 dark:text-pink-300"
+                    : " w-full mx-auto flex justify-center items-center rounded-md border border-blue-300  dark:blue-700 shadow-sm px-4 py-2 bg-primary dark:bg-gray-800 text-sm font-medium text-gray-100 dark:text-gray-100  hover:bg-blue-800  dark:hover:bg-blue-800  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-300 dark:focus:ring-offset-blue-700 focus:ring-blue-500",
+                  " px-2",
+                ]}
+                aria-current={
+                  item.href.length > 0 &&
+                  Astro.url.toString().includes(item.href)
+                    ? "page"
+                    : undefined
+                }
+              >
+                {item.name}
+              </a>
+            </div>
           ))
         }
       </div>
