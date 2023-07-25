@@ -10,112 +10,96 @@ const social = await getCollection("social");
 <div class="md:h-24"></div>
 <footer class="whitespace-nowrap text-gray-600 dark:text-gray-400">
   <div
-    class="md:fixed z-20 md:bottom-0 md:inset-x-0 bg-primary dark:bg-gray-800 px-1 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between lg:flex-col flex-col border-t-2 border-secondary dark:border-secondary"
+    class="md:fixed z-20 md:bottom-0 md:inset-x-0 bg-primary dark:bg-gray-800 px-1 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between flex-row border-t-2 border-secondary dark:border-secondary flex-wrap"
   >
-    <span class="flex justify-between pt-5 flex-row">
-      <div class="menuf" data-name="f-1">
-        <p
-          class="flex justify-between text-sm text-gray-600 dark:text-gray-300 sm:ml-1 sm:py-1 md:mx-6 md:px-4 lg:mx-4 lg:px-8 dark:lg:border-secondary md:py-1"
-        >
-          <a
-            href="#about"
-            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          >
-            من نحن
-          </a>
-        </p>
-      </div>
-      <p class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600">
-        <a
-          href="#serv"
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          خدماتنا
-        </a>
-      </p>
-      <p
-        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
-      >
-        <a
-          href="#jobs"
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          اعمالنا
-        </a>
-      </p>
-      <p
-        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
-      >
-        <a
-          href={import.meta.env.BASE_URL + "sitemap-index.xml"}
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          اتصل بنا
-        </a>
-      </p>
-      <p
-        class="sm:py-1 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
-      >
-        <a
-          href={import.meta.env.BASE_URL + "terms"}
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          سياسة الخصوصية
-        </a>
-      </p>
-    </span>
-    <span
-      class="flex justify-center pt-5 space-x-6 md:hidden lg:hidden mt-1 lg:mt-0"
-    >
-      {
-        social.map((s) =>
-          s.data.link ? (
+    <div class="flex flex-row w-full justify-center items-center">
+      <div class="flex w-1/2 justify-between flex-col">
+        <div class="menuf" data-name="f-1">
+          <p class="sm:py-0 mx-2 lg:mx-6 lg:px-2 text-sm text-gray-600">
             <a
-              href={s.data.link}
-              class="ml-3  text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-              rel="noopener noreferrer"
-              target="_blank"
+              href="#about"
+              class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
             >
-              <Icon name={s.data.icon} class=" h-5 w-5" />
-              <span class="sr-only">{s.data.name}</span>
+              من نحن
             </a>
-          ) : (
-            ""
-          )
-        )
-      }
-    </span>
-    <span class="flex-none pt-5 flex flex-row items-center">
-      <a
-        class="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900 dark:text:gray-100"
-        href={import.meta.env.BASE_URL}
-      >
-        <img src={Logo.src} alt="Footer Logo" class="h-10 w-10 rounded-full" />
-        <span class="sr-only">Logo</span>
-      </a>
-    </span>
-    <div class="flex-none flex flex-row items-stretch">
-      <span
-        class="lg:justify-start text-md pt-5 text-secondary dark:text-secondary ml-2 pl-2 border-white-300 dark:border-secondary py-1"
-      >
-        شركة دراهم للوساطة و التجارة الالكترونية © {new Date().getFullYear()}
-        <!-- <a
-            href="https://hellotham.com"
-            class=" text-secondary hover:text-blue-600 dark:text-[#f0c986 dark:hover:text-blue-300"
+          </p>
+        </div>
+        <p class="sm:py-0 mx-2 lg:mx-6 lg:px-2 text-sm text-gray-600">
+          <a
+            href="#serv"
+            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Hello Tham Pty Ltd
+            خدماتنا
           </a>
-        </p> -->
+        </p>
+        <p
+          class="sm:py-0 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+        >
+          <a
+            href="#jobs"
+            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            اعمالنا
+          </a>
+        </p>
+        <p
+          class="sm:py-0 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+        >
+          <a
+            href={import.meta.env.BASE_URL + "sitemap-index.xml"}
+            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            اتصل بنا
+          </a>
+        </p>
+        <p
+          class="sm:py-0 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+        >
+          <a
+            href={import.meta.env.BASE_URL + "terms"}
+            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            سياسة الخصوصية
+          </a>
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center w-1/2 pt-1 md:hidden lg:hidden mt-1 lg:mt-0"
+      >
+        {
+          social.map((s) =>
+            s.data.link ? (
+              <a
+                href={s.data.link}
+                class="  text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Icon name={s.data.icon} class=" h-5 w-5" />
+                <span class="sr-only">{s.data.name}</span>
+              </a>
+            ) : (
+              ""
+            )
+          )
+        }
+      </div>
+    </div>
+
+    <div class="flex flex-row w-full justify-center items-center">
+      <span
+        class="lg: justify-center text-md pt-2 text-secondary dark:text-secondary ml-2 pl-1 border-white-300 dark:border-secondary py-1"
+      >
+        شركة دراهم للوساطة و التجارة الالكترونية © {new Date().getFullYear()}
       </span>
       <span class="max-md:hidden inline-flex lg:m-auto space-x-4 items-end">
         {
@@ -123,7 +107,7 @@ const social = await getCollection("social");
             s.data.link ? (
               <a
                 href={s.data.link}
-                class="ml-3 text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+                class=" text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -137,48 +121,49 @@ const social = await getCollection("social");
         }
       </span>
     </div>
+
+    <script is:inline>
+      const aboutus = [
+        {
+          name: "من نحن",
+          description:
+            "نحن هنا لنساعدك في تطوير اعمالك وتوسيع التجارة نوصلك لاهدافك بايسر الطرق واسرعها نؤمِن لك التعامل مع كل الاطراف الذين ترغب في اتمام الصفقات والتواصل  معهم نضعك على خارطة العالم للتعريف باعمالك وتنميتها وتطويرها.",
+          pop: "f-1",
+        },
+      ];
+      document.querySelectorAll(" .menuf").forEach((product) => {
+        product.onclick = () => {
+          // preveiwMenue.style.display = "flex";
+          let Overlay = document.createElement("div");
+          Overlay.className = "menu-preview1";
+          document.body.appendChild(Overlay);
+          let popupbox = document.createElement("div");
+          popupbox.className = "preview1";
+
+          let name = product.getAttribute("data-name");
+          aboutus.map((about) => {
+            if (about.pop == name) {
+              let popparagraph = document.createElement("h3");
+              let partext = document.createTextNode(about.description);
+              popparagraph.appendChild(partext);
+              popupbox.appendChild(popparagraph);
+              document.body.appendChild(popupbox);
+            }
+          });
+
+          let closeB = document.createElement("span");
+          closeB.className = "fa-xmark1";
+          let closeBtext = document.createTextNode("x");
+          closeB.appendChild(closeBtext);
+          popupbox.appendChild(closeB);
+        };
+      });
+      document.addEventListener("click", function (e) {
+        if (e.target.className == "fa-xmark1") {
+          e.target.parentNode.remove();
+          document.querySelector(".menu-preview1").remove();
+        }
+      });
+    </script>
   </div>
-  <script is:inline>
-    const aboutus = [
-      {
-        name: "من نحن",
-        description:
-          "نحن هنا لنساعدك في تطوير اعمالك وتوسيع التجارة نوصلك لاهدافك بايسر الطرق واسرعها نؤمِن لك التعامل مع كل الاطراف الذين ترغب في اتمام الصفقات والتواصل  معهم نضعك على خارطة العالم للتعريف باعمالك وتنميتها وتطويرها.",
-        pop: "f-1",
-      },
-    ];
-    document.querySelectorAll(" .menuf").forEach((product) => {
-      product.onclick = () => {
-        // preveiwMenue.style.display = "flex";
-        let Overlay = document.createElement("div");
-        Overlay.className = "menu-preview1";
-        document.body.appendChild(Overlay);
-        let popupbox = document.createElement("div");
-        popupbox.className = "preview1";
-
-        let name = product.getAttribute("data-name");
-        aboutus.map((about) => {
-          if (about.pop == name) {
-            let popparagraph = document.createElement("h3");
-            let partext = document.createTextNode(about.description);
-            popparagraph.appendChild(partext);
-            popupbox.appendChild(popparagraph);
-            document.body.appendChild(popupbox);
-          }
-        });
-
-        let closeB = document.createElement("span");
-        closeB.className = "fa-xmark1";
-        let closeBtext = document.createTextNode("x");
-        closeB.appendChild(closeBtext);
-        popupbox.appendChild(closeB);
-      };
-    });
-    document.addEventListener("click", function (e) {
-      if (e.target.className == "fa-xmark1") {
-        e.target.parentNode.remove();
-        document.querySelector(".menu-preview1").remove();
-      }
-    });
-  </script>
 </footer>
