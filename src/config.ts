@@ -84,11 +84,14 @@ export { default as DefaultSVG } from "./assets/svg/undraw/undraw_my_feed.svg";
 export { default as DefaultImage } from "./assets/undraw/undraw_my_feed.png";
 
 export const NavigationLinks = [
-  { name: "الصفحة الرئيسية", href: "#" },
-  { name: "خدماتنا", href: "about" },
-  { name: " اعمالنا", href: "#" },
+  { name: "الصفحة الرئيسية", href: "/" },
+  { name: "خدماتنا", href: "/#serv" },
+  { name: " اعمالنا", href: "#jobs" },
   { name: "تواصل معنا", href: "contact" },
-  { name: " نموذج طلب الخدمة", href: "doc/introduction" },
+  {
+    name: " نموذج طلب الخدمة",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSd-dJWdJfnX2HQxJ4HkNuCbSLOi9SyzhLbScDEInoHuiKRIng/viewform?usp=sf_link",
+  },
 ];
 
 export const footerLinks = [
