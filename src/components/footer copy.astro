@@ -254,14 +254,14 @@ const social = await getCollection("social");
 
   .menusmi-item,
   .menusmi-open-button {
-    background: #f0c986;
+    background: #e91e63;
     border-radius: 100%;
     width: 40px;
     height: 40px;
     margin-left: -20px;
     position: absolute;
     top: 20px;
-    color: #0f3548;
+    color: white;
     text-align: center;
     line-height: 40px;
     transform: translate3d(0, 0, 0);
@@ -275,7 +275,7 @@ const social = await getCollection("social");
   .hamburger {
     width: 20px;
     height: 2px;
-    background: #0f3548;
+    background: white;
     display: block;
     position: absolute;
     top: 50%;
@@ -309,20 +309,17 @@ const social = await getCollection("social");
 
   .menusmi {
     position: absolute;
-    left: 50%;
-    /* margin-left: -190px;
-    padding-top: 20px;
-    padding-left: 190px;
-    width: 380px;
-    height: 250px; */
+    right: 1rem;
+    margin-right: 2rem;
+    rotate: -20deg;
     box-sizing: border-box;
     font-size: 20px;
     text-align: left;
   }
 
   .menusmi-item:hover {
-    background: #8bc34a;
-    color: #8bc34a;
+    background: white;
+    color: #f0c986;
   }
   .menusmi-item:nth-child(3) {
     transition-duration: 180ms;
@@ -337,9 +334,6 @@ const social = await getCollection("social");
     transition-duration: 180ms;
   }
   .menusmi-item:nth-child(7) {
-    transition-duration: 180ms;
-  }
-  .menusmi-item:nth-child(8) {
     transition-duration: 180ms;
   }
 
@@ -366,29 +360,24 @@ const social = await getCollection("social");
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(3) {
     transition-duration: 180ms;
-    transform: translate3d(105px, 0px, 0);
+    transform: translate3d(-105px, 0px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(4) {
     transition-duration: 280ms;
-    transform: translate3d(84.96644px, 61.69039px, 0);
+    transform: translate3d(-90.85901px, -52.62737px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(5) {
     transition-duration: 380ms;
-    transform: translate3d(32.5104px, 99.84024px, 0);
+    transform: translate3d(-52.24496px, -91.07944px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(6) {
     transition-duration: 480ms;
-    transform: translate3d(-32.35134px, 99.89189px, 0);
+    transform: translate3d(0.44138px, -104.99907px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(7) {
     transition-duration: 580ms;
-    transform: translate3d(-84.86808px, 61.82563px, 0);
+    transform: translate3d(53.00884px, -90.63698px, 0);
   }
-  .menusmi-open:checked ~ .menusmi-item:nth-child(8) {
-    transition-duration: 680ms;
-    transform: translate3d(-104.99987px, 0.16723px, 0);
-  }
-
   .hidden {
     display: none;
   }
