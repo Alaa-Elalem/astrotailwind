@@ -117,7 +117,7 @@ import { LogoImage, FeaturedSVG } from "../config";
     fill: black;
     stroke: black;
     stroke-dasharray: 395;
-    animation: draw 6s alternate-reverse infinite;
+    animation: draw 5s ease-in infinite;
     /* animation-delay: 2s; */
   }
   @keyframes draw {
@@ -149,13 +149,14 @@ import { LogoImage, FeaturedSVG } from "../config";
       stroke-dashoffset: -50;
             fill: none;
     } */
-    88% {
+    55% {
       stroke-dashoffset: 5;
       box-shadow: 0 0 2px #8ff;
       stroke: #000;
       fill: none;
     }
-    89% {
+    56% {
+      animation-delay: 1s;
       stroke-dashoffset: 0;
       stroke: #000;
       fill: #000;
