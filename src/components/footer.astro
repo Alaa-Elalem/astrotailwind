@@ -22,12 +22,12 @@ const social = await getCollection("social");
     <span class="hamburger hamburger-3"></span>
   </label>
 
-  <a href="#" class="menusmi-item"> <i class="fa fa-bar-chart"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-plus"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-heart"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-envelope"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-cog"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-ellipsis-h"></i></a>
+  <a href="#" class="menusmi-item"> <Icon name="envelope-outline" /></a>
+  <a href="#" class="menusmi-item"> <Icon name="facebook-outline" /></a>
+  <a href="#" class="menusmi-item"> <Icon name="instagram-outline" /></a>
+  <a href="#" class="menusmi-item"> <Icon name="phone-outline" /></a>
+  <a href="#" class="menusmi-item"> <Icon name="tiktok2" /></a>
+  <a href="#" class="menusmi-item"> <Icon name="whatsapp-outline" /></a>
 </nav>
 
 <!-- filters -->
@@ -250,22 +250,24 @@ const social = await getCollection("social");
 
   .menusmi {
     filter: url("#goo");
+    z-index: 999;
   }
 
   .menusmi-item,
   .menusmi-open-button {
-    background: #086fe5;
+    background: #0f0;
     border-radius: 100%;
     width: 40px;
     height: 40px;
     margin-left: -20px;
     position: absolute;
     top: 20px;
-    color: #0f3548;
+    color: white;
     text-align: center;
     line-height: 40px;
     transform: translate3d(0, 0, 0);
     transition: transform ease-out 200ms;
+    /* z-index: 500; */
   }
 
   .menusmi-open {
@@ -275,7 +277,7 @@ const social = await getCollection("social");
   .hamburger {
     width: 20px;
     height: 2px;
-    background: #0f3548;
+    background: white;
     display: block;
     position: absolute;
     top: 50%;
@@ -283,6 +285,7 @@ const social = await getCollection("social");
     margin-left: -10px;
     margin-top: -1px;
     transition: transform 200ms;
+    /* z-index: 600; */
   }
 
   .hamburger-1 {
