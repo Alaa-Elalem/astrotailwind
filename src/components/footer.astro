@@ -17,7 +17,10 @@ const social = await getCollection("social");
     id="menusmi-open"
   />
   <label class="menusmi-open-button" for="menusmi-open">
-    <Icon name="add-call" class="p-1.5" />
+    <Icon
+      name="add-call"
+      class="hamburger-0 p-1.5 bg-[#0c86ef] text-white rounded-full"
+    />
     <span class="hamburger-1"></span>
     <span class="hamburger-2"></span>
     <span class="hamburger-3"></span>
@@ -316,8 +319,24 @@ const social = await getCollection("social");
     /* z-index: 600; */
   }
 
-  .hamburger-1 {
-    transform: translate3d(0, -8px, 0);
+  .hamburger-0 {
+    display: inline-block;
+    position: relative;
+    animation: bounce 0.5s infinite linear;
+  }
+  @keyframes bounce {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -0.2em;
+    }
+    70% {
+      top: -0.3em;
+    }
+    100% {
+      top: 0;
+    }
   }
 
   .hamburger-2 {
@@ -328,8 +347,8 @@ const social = await getCollection("social");
     transform: translate3d(0, 8px, 0);
   }
 
-  .menusmi-open:checked + .menusmi-open-button .hamburger-1 {
-    transform: translate3d(0, 0, 0) rotate(45deg);
+  .menusmi-open:checked + .menusmi-open-button .hamburger-0 {
+    transform: translate3d(0, 0, 0) rotate(130deg);
   }
   .menusmi-open:checked + .menusmi-open-button .hamburger-2 {
     transform: translate3d(0, 0, 0) scale(0.1, 1);
