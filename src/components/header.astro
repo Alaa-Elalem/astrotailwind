@@ -143,6 +143,7 @@ import { Logo } from "../config";
       id="mobile-menu"
     >
       <div
+        x-on:click="isOpen = !isOpen"
         class="rightmenu px-4 w-3/5 flex-col justify-center py-2 whitespace-nowrap bg-gray-100 dark:bg-gray-800 font-semibold border-blue-300 dark:border-blue-600 border-t-2 border-b-2"
       >
         {
