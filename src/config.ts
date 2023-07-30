@@ -85,7 +85,7 @@ export { default as DefaultImage } from "./assets/undraw/undraw_my_feed.png";
 
 export const NavigationLinks = [
   { name: "الصفحة الرئيسية", href: "" },
-  { name: " من نحن", href: "about" },
+  { name: " من نحن", href: "#" },
   { name: "خدماتنا", href: "#serv" },
   { name: " اعمالنا", href: "#jobs" },
   { name: "تواصل معنا", href: "contact" },

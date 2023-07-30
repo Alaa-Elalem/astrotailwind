@@ -152,12 +152,13 @@ import { Logo } from "../config";
               <a
                 href={import.meta.env.BASE_URL + item.href}
                 class:list={[
+                  item.href == "#" && "menuf",
                   item.href.length > 0 &&
                   Astro.url.toString().includes(item.href)
                     ? "bg-blue-200 text-pink-600 dark:bg-blue-800 dark:text-pink-300"
                     : " w-full mx-auto flex justify-center items-center rounded-md border border-blue-300  dark:blue-700 shadow-sm px-4 py-2 bg-primary dark:bg-gray-800 text-sm font-medium text-gray-100 dark:text-gray-100  hover:bg-blue-800  dark:hover:bg-blue-800  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-300 dark:focus:ring-offset-blue-700 focus:ring-blue-500",
-                  " px-2",
                 ]}
+                data-name={item.href == "#" && "f-1"}
                 aria-current={
                   item.href.length > 0 &&
                   Astro.url.toString().includes(item.href)
