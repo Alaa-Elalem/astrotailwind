@@ -17,17 +17,48 @@ const social = await getCollection("social");
     id="menusmi-open"
   />
   <label class="menusmi-open-button" for="menusmi-open">
-    <span class="hamburger hamburger-1"></span>
-    <span class="hamburger hamburger-2"></span>
-    <span class="hamburger hamburger-3"></span>
+    <Icon
+      name="add-call"
+      class="hamburger-0 p-1.5 bg-[#0c86ef] text-white rounded-full"
+    />
+    <span class="hamburger-1"></span>
+    <span class="hamburger-2"></span>
+    <span class="hamburger-3"></span>
   </label>
 
-  <a href="#" class="menusmi-item"> <i class="fa fa-bar-chart"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-plus"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-heart"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-envelope"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-cog"></i></a>
-  <a href="#" class="menusmi-item"> <i class="fa fa-ellipsis-h"></i></a>
+  <a href="tel:091-6656699" class="menusmi-item">
+    <Icon name="phone-outline" class="p-1.5" /></a
+  >
+  <a
+    href="https://www.facebook.com/profile.php?id=100088916312"
+    class="menusmi-item"
+  >
+    <Icon
+      name="facebook-outline"
+      class="p-1.5 stroke-white bg-[#0c86ef] text-white rounded-full"
+    /></a
+  >
+  <a href="https://wa.me/+218916656699?text=مرحبا" class="menusmi-item">
+    <Icon name="whatsapp-outline" class="p-1.5" /></a
+  >
+  <a href="mailto:info@darahem.ly" class="menusmi-item">
+    <Icon
+      name="envelope-outline"
+      class="p-1.5 text-black bg-white rounded-full border-black border-2"
+    /></a
+  >
+  <a href="#" class="menusmi-item">
+    <Icon
+      name="baseline-tiktok"
+      class="p-1.5 bg-black text-white rounded-full"
+    /></a
+  >
+  <a href="https://www.instagram.com/darahem.ly" class="menusmi-item">
+    <Icon
+      name="instagram-outline"
+      class="p-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"
+    /></a
+  >
 </nav>
 
 <!-- filters -->
@@ -70,8 +101,8 @@ const social = await getCollection("social");
 <div
   class="md:fixed z-20 md:bottom-0 md:inset-x-0 bg-primary dark:bg-gray-800 px-1 lg:px-8 py-1 lg:py-4 w-full flex items-center justify-between flex-row border-t-2 border-secondary dark:border-secondary flex-wrap"
 >
-  <div class="flex flex-row w-full justify-center items-center">
-    <div class="flex w-1/2 justify-between flex-col">
+  <div class="flex flex-row w-full justify-center flex-wrap items-center">
+    <div class="flex basis-1/2 justify-center items-center flex-col">
       <div class="menuf" data-name="f-1">
         <p class="sm:py-0 mx-2 lg:mx-6 lg:px-2 text-sm text-gray-600">
           <a
@@ -104,11 +135,14 @@ const social = await getCollection("social");
           اعمالنا
         </a>
       </p>
+    </div>
+    <div class="flex basis-1/2 flex-col justify-center items-center">
       <p
         class="sm:py-0 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
       >
         <a
-          href={import.meta.env.BASE_URL + "sitemap-index.xml"}
+          href="{import.meta.env.BASE_URL + "
+          sitemap-index.xml"}"
           class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
@@ -121,17 +155,29 @@ const social = await getCollection("social");
       >
         <a
           href={import.meta.env.BASE_URL + "terms"}
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+          class="text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
         >
           سياسة الخصوصية
         </a>
       </p>
+      <p
+        class="sm:py-0 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+      >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd-dJWdJfnX2HQxJ4HkNuCbSLOi9SyzhLbScDEInoHuiKRIng/viewform?usp=sf_link"
+          class="text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          نموذج طلب الخدمة
+        </a>
+      </p>
     </div>
 
     <div
-      class="flex flex-col justify-center items-center w-1/2 pt-1 md:hidden lg:hidden mt-1 lg:mt-0"
+      class="flex justify-center items-center basis-full pt-1 md:hidden lg:hidden mt-1 lg:mt-0"
     >
       {
         social.map((s) =>
@@ -250,11 +296,12 @@ const social = await getCollection("social");
 
   .menusmi {
     filter: url("#goo");
+    z-index: 999;
   }
 
   .menusmi-item,
   .menusmi-open-button {
-    background: #e91e63;
+    background: #0f0;
     border-radius: 100%;
     width: 40px;
     height: 40px;
@@ -266,6 +313,7 @@ const social = await getCollection("social");
     line-height: 40px;
     transform: translate3d(0, 0, 0);
     transition: transform ease-out 200ms;
+    /* z-index: 500; */
   }
 
   .menusmi-open {
@@ -283,10 +331,27 @@ const social = await getCollection("social");
     margin-left: -10px;
     margin-top: -1px;
     transition: transform 200ms;
+    /* z-index: 600; */
   }
 
-  .hamburger-1 {
-    transform: translate3d(0, -8px, 0);
+  .hamburger-0 {
+    display: inline-block;
+    position: relative;
+    animation: bounce 0.5s infinite linear;
+  }
+  @keyframes bounce {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -0.2em;
+    }
+    70% {
+      top: -0.3em;
+    }
+    100% {
+      top: 0;
+    }
   }
 
   .hamburger-2 {
@@ -297,8 +362,8 @@ const social = await getCollection("social");
     transform: translate3d(0, 8px, 0);
   }
 
-  .menusmi-open:checked + .menusmi-open-button .hamburger-1 {
-    transform: translate3d(0, 0, 0) rotate(45deg);
+  .menusmi-open:checked + .menusmi-open-button .hamburger-0 {
+    transform: translate3d(0, 0, 0) rotate(130deg);
   }
   .menusmi-open:checked + .menusmi-open-button .hamburger-2 {
     transform: translate3d(0, 0, 0) scale(0.1, 1);
@@ -308,18 +373,22 @@ const social = await getCollection("social");
   }
 
   .menusmi {
-    position: absolute;
-    right: 1rem;
-    margin-right: 2rem;
-    rotate: -20deg;
+    position: fixed;
+    left: 15%;
+    top: 60%;
+    /* margin-left: -190px;
+    padding-top: 20px;
+    padding-left: 190px;
+    width: 380px;
+    height: 250px; */
     box-sizing: border-box;
     font-size: 20px;
     text-align: left;
   }
 
   .menusmi-item:hover {
-    background: white;
-    color: #f0c986;
+    background: #8bc34a;
+    color: #8bc34a;
   }
   .menusmi-item:nth-child(3) {
     transition-duration: 180ms;
@@ -334,6 +403,9 @@ const social = await getCollection("social");
     transition-duration: 180ms;
   }
   .menusmi-item:nth-child(7) {
+    transition-duration: 180ms;
+  }
+  .menusmi-item:nth-child(8) {
     transition-duration: 180ms;
   }
 
@@ -358,26 +430,32 @@ const social = await getCollection("social");
   .menusmi-open:checked ~ .menusmi-item {
     transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
   }
+
   .menusmi-open:checked ~ .menusmi-item:nth-child(3) {
     transition-duration: 180ms;
-    transform: translate3d(-105px, 0px, 0);
+    transform: translate3d(8.87954px, -104.62387px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(4) {
     transition-duration: 280ms;
-    transform: translate3d(-90.85901px, -52.62737px, 0);
+    transform: translate3d(66.46873px, -81.28289px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(5) {
     transition-duration: 380ms;
-    transform: translate3d(-52.24496px, -91.07944px, 0);
+    transform: translate3d(100.77839px, -29.47399px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(6) {
     transition-duration: 480ms;
-    transform: translate3d(0.44138px, -104.99907px, 0);
+    transform: translate3d(99.79217px, 32.65767px, 0);
   }
   .menusmi-open:checked ~ .menusmi-item:nth-child(7) {
     transition-duration: 580ms;
-    transform: translate3d(53.00884px, -90.63698px, 0);
+    transform: translate3d(63.85546px, 83.35155px, 0);
   }
+  .menusmi-open:checked ~ .menusmi-item:nth-child(8) {
+    transition-duration: 680ms;
+    transform: translate3d(5.55448px, 104.85298px, 0);
+  }
+
   .hidden {
     display: none;
   }
