@@ -107,7 +107,7 @@ const social = await getCollection("social");
         <p class="py-2 mx-2 lg:mx-6 lg:px-2 text-sm text-gray-600">
           <a
             href="#about"
-            class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+            class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           >
             من نحن
           </a>
@@ -116,7 +116,7 @@ const social = await getCollection("social");
       <p class="py-2 mx-2 lg:mx-6 lg:px-2 text-sm text-gray-600">
         <a
           href="#serv"
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+          class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -128,7 +128,7 @@ const social = await getCollection("social");
       >
         <a
           href="#jobs"
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+          class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -140,7 +140,7 @@ const social = await getCollection("social");
       >
         <a
           href={import.meta.env.BASE_URL + " sitemap-index.xml"}
-          class="text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+          class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -148,32 +148,32 @@ const social = await getCollection("social");
         </a>
       </p>
     </div>
-    <div class="flex basis-2/3 flex-col justify-center items-center">
-      <p
-        class="py-2 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
-      >
-        <a
-          href={import.meta.env.BASE_URL + "terms"}
-          class="text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          سياسة الخصوصية
-        </a>
-      </p>
+    <div class="flex basis-2/3 flex-col justify-start items-center -mt-3">
       <p
         class="py-2 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
       >
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSd-dJWdJfnX2HQxJ4HkNuCbSLOi9SyzhLbScDEInoHuiKRIng/viewform?usp=sf_link"
-          class="text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
+          class="text-lg text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
           rel="noopener noreferrer"
           target="_blank"
         >
           نموذج طلب الخدمة
         </a>
       </p>
-      <p class="flex justify-center items-center pt-3">
+      <p
+        class="py-2 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
+      >
+        <a
+          href={import.meta.env.BASE_URL + "terms"}
+          class="text-lg text-secondary hover:text-blue-600 whitespace-nowrap dark:text-secondary dark:hover:text-blue-300"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          سياسة الخصوصية
+        </a>
+      </p>
+      <p class="flex justify-center items-center pt-11">
         {
           social.map((s) =>
             s.data.link ? (
@@ -183,7 +183,7 @@ const social = await getCollection("social");
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icon name={s.data.icon} class=" h-5 w-5" />
+                <Icon name={s.data.icon} class=" h-8 w-8" />
                 <span class="sr-only">{s.data.name}</span>
               </a>
             ) : (
@@ -229,7 +229,7 @@ const social = await getCollection("social");
           s.data.link ? (
             <a
               href={s.data.link}
-              class=" text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+              class=" text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
               rel="noopener noreferrer"
               target="_blank"
             >
