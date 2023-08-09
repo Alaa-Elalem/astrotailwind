@@ -122,7 +122,7 @@ const jobs = [
                     </div>
                   </a>
                 </div>
-                <div class="windows">
+                <div class="windowsp">
                   <a
                     href="/assets/google-play-badge-en.svg"
                     class="my-4 gap-2 text-secondar flex justify-center items-center py-6 bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
@@ -147,6 +147,27 @@ const jobs = [
     </div>
     <!-- </Base> -->
   </body>
+  <script is:inline>
+    var ua = navigator.userAgent.toLowerCase();
+    var isiPhone = ua.indexOf("iphone") > -1;
+    var isiPad = ua.indexOf("ipad") > -1;
+    var isAndroid = ua.indexOf("android") > -1;
+
+    let isWindows = ua.indexOf("windows") > -1;
+    if (isiPhone == true) {
+      let apple = document.querySelector(".apple");
+      apple.style.display = "block";
+    }
+    if (isAndroid == true) {
+      let android = document.querySelector(".android");
+      android.style.display = "block";
+    }
+    if (isWindows == true) {
+      let windowsp = document.querySelector(".windowsp");
+      windowsp.className = "active";
+      // document.querySelector(".windowsp").classList.add("active");
+    }
+  </script>
 
   <style is:global>
     .apple {
