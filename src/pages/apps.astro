@@ -6,13 +6,12 @@ import PageHero from "../components/pagehero.astro";
 import coverSVG from "../assets/svg/darahem/darahem.jpg";
 // import socialImage from "../assets/undraw/undraw_page_not_found.png";
 
-const frontmatter: Frontmatter = {
-  title: " تحميل تطبيق دراهم",
-  description: " ميزات تطلبق دراهم",
-  coverSVG: coverSVG,
-  // socialImage: socialImage,
-  publishDate: SiteMetadata.buildTime,
-};
+// const frontmatter: Frontmatter = {
+//   title: " تحميل تطبيق دراهم",
+//   description: " ميزات تطلبق دراهم",
+//   coverSVG: coverSVG,
+//   publishDate: SiteMetadata.buildTime,
+// };
 
 const jobs = [
   {
@@ -37,61 +36,133 @@ const jobs = [
 ];
 ---
 
-<Base frontmatter={frontmatter}>
-  <header>
-    <PageHero
-      title={frontmatter.title}
-      description={frontmatter.description}
-      coverSVG={frontmatter.coverSVG}
-      socialImage={frontmatter.socialImage}
-    />
-  </header>
-  <div
-    class="text-center bg-slate-100 mt-2 py-6 text-3xl leading-8 font-extrabold dark:bg-gray-800"
-  >
-    <h2>تطبيق دراهم</h2>
-    <p
-      class="mt-2 py-6 text-3xl leading-8 font-extrabold max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 tracking-tight text-gray-900 dark:text-secondary sm:text-4xl"
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <link rel="apple-touch-icon" href={`${Astro.site}apple-touchicon.png`} />
+    <link rel="manifest" href={`${Astro.site}site.webmanifest`} />
+    <link rel="sitemap" href={`${Astro.site}sitemap-indexxml`} />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href={`${Astro.site}rss.xml`} />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta name="generator" content={Astro.generator} /> -->
+    <script is:inline>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <style>
+      @font-face {
+        font-family: "cairo";
+        src: url("/fonts/Cairo-Regular.ttf") format("ttf");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      body {
+        font-family: cairo;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="text-center bg-slate-100 py-1 text-3xl leading-8 font-extrabold dark:bg-gray-800"
     >
-      ابقى على تواصل بسعر سلة العملات والمعادن الثمينة بسعر حقيقي ومتجدد وبدون
-      اعلانات
-    </p>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="shrink-0">
-        <dl
-          class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 p-4"
-        >
-          {
-            jobs.map((job) => (
-              <div>
-                <div class=" bg-white rounded-xl shadow-lg m-2 p-2">
-                  <div>
-                    <a
-                      href={job.link}
-                      class="ml-3 text-secondary  py-4  bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-                      rel="noopener noreferrer"
-                      target="_blank"
+      <p
+        class="py-4 text-3xl leading-8 font-extrabold max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 tracking-tight text-gray-900 dark:text-secondary sm:text-4xl"
+      >
+        حمل التطبيق من هنا
+      </p>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="shrink-0">
+          <dl
+            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+          >
+            <div>
+              <div class="bg-white rounded-xl shadow-lg">
+                <div class="android">
+                  <a
+                    href="/assets/google-play-badge-en.svg"
+                    class="my-4 gap-2 text-secondar flex justify-center items-center py-6 bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="mx-auto flex w-40 items-center bg-[#2a2e39] border-2 rounded-lg justify-center"
                     >
-                      <p class=" m-auto  text-lg leading-6  font-bold text-gray-900  dark:text-secondary dark:opacity-100">
-                        {job.name}
-                      </p>
-                      <div class=" mx-auto flex  w-36  mt-3  items-center   border-[#2a2e39]  border-2 rounded-lg justify-center">
-                        <img
-                          class="mx-auto  w-32  p-1 flex items-center justify-center text-white"
-                          src={job.logolink}
-                        />
-                      </div>
-                      <dd class="  hidden  items-center justify-center  mr-4 mt-2 text-base text-gray-600 dark:text-gray-400">
-                        {job.logolink}
-                      </dd>
-                    </a>
-                  </div>
+                      <img
+                        class="mx-auto w-36 p-1 flex items-center justify-center text-white"
+                        src="/assets/google-play-badge-en (1).svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="apple">
+                  <a
+                    href="/assets/google-play-badge-en.svg"
+                    class="ml-3 text-secondar flex justify-center items-center py-6 bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="mx-auto flex w-40 items-center bg-[#2a2e39] border-2 rounded-lg justify-center"
+                    >
+                      <img
+                        class="mx-auto w-36 p-1 flex items-center justify-center text-white"
+                        src="/assets/app-store-badge-en.svg"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="windows">
+                  <a
+                    href="/assets/google-play-badge-en.svg"
+                    class="my-4 gap-2 text-secondar flex justify-center items-center py-6 bg-white rounded-xl shadow-lg hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="mx-auto flex w-40 items-center bg-[#2a2e39] border-2 rounded-lg justify-center"
+                    >
+                      <img
+                        class="mx-auto w-36 p-1 flex items-center justify-center text-white"
+                        src="/assets/app-desktop-badge-en.svg"
+                      />
+                    </div>
+                  </a>
                 </div>
               </div>
-            ))
-          }
-        </dl>
+            </div>
+          </dl>
+        </div>
       </div>
     </div>
-  </div>
-</Base>
+    <!-- </Base> -->
+  </body>
+
+  <style is:global>
+    .apple {
+      display: none;
+    }
+    .android {
+      display: none;
+    }
+    .windowsp {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .rightmenu {
+      margin-right: 35%;
+    }
+  </style>
+</html>
