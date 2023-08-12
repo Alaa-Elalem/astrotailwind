@@ -116,8 +116,8 @@ const jobs = [];
     var isiPhone = ua.indexOf("iphone") > -1;
     var isiPad = ua.indexOf("ipad") > -1;
     var isAndroid = ua.indexOf("android") > -1;
-
     let isWindows = ua.indexOf("windows") > -1;
+    
     if (isiPhone == true) {
       let apple = document.querySelector(".apple");
       apple.style.display = "block";
@@ -136,7 +136,10 @@ const jobs = [];
 
       window.location.href = "https://bit.ly/46Ygn70";
     }
-    if (isWindows == true) {
+    if (isWindows==false && isAndroid==false && isiPad==false && isiPhone==false ){
+      let isOthers==true ;
+    }
+    if (isWindows == true || isOthers==true ) {
       let windowsp = document.querySelector(".windowsp");
       let android = document.querySelector(".android");
       let apple = document.querySelector(".apple");
