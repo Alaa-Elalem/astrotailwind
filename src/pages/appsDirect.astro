@@ -49,9 +49,7 @@ const jobs = [];
       </p>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="shrink-0">
-          <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-          >
+          <dl class="space-y-10 md:space-y-0 md:gap-x-8 md:gap-y-10">
             <div>
               <div class="bg-white rounded-xl shadow-lg w-4/5 mx-auto">
                 <div class="android mx-auto">
@@ -126,6 +124,12 @@ const jobs = [];
       window.location.href =
         "https://apps.apple.com/us/app/%D8%AF%D8%B1%D8%A7%D9%87%D9%85/id6448579250?utm_source=FB&utm_medium=fcpage&utm_campaign=01";
     }
+    if (isiPad == true) {
+      let apple = document.querySelector(".apple");
+      apple.style.display = "block";
+      window.location.href =
+        "https://apps.apple.com/us/app/%D8%AF%D8%B1%D8%A7%D9%87%D9%85/id6448579250?utm_source=FB&utm_medium=fcpage&utm_campaign=01";
+    }
     if (isAndroid == true) {
       let android = document.querySelector(".android");
       android.style.display = "block";
@@ -134,7 +138,11 @@ const jobs = [];
     }
     if (isWindows == true) {
       let windowsp = document.querySelector(".windowsp");
+      let android = document.querySelector(".android");
+      let apple = document.querySelector(".apple");
       windowsp.className = "active";
+      android.style.display = "block";
+      apple.style.display = "block";
       // document.querySelector(".windowsp").classList.add("active");
     }
   </script>
