@@ -117,9 +117,9 @@ const jobs = [];
     var isiPad = ua.indexOf("ipad") > -1;
     var isAndroid = ua.indexOf("android") > -1;
     let isWindows = ua.indexOf("windows") > -1;
-    let isOthers = true;
+    let isOthers = false;
 
-    if (isiPhone == true) {
+    if (isiPhone === true) {
       let apple = document.querySelector(".apple");
       apple.style.display = "block";
       window.location.href =
@@ -131,21 +131,21 @@ const jobs = [];
     //   window.location.href =
     //     "https://apps.apple.com/us/app/%D8%AF%D8%B1%D8%A7%D9%87%D9%85/id6448579250?utm_source=FB&utm_medium=fcpage&utm_campaign=01";
     // }
-    if (isAndroid == true || isiPad == true) {
+    if (isAndroid === true || isiPad === true) {
       let android = document.querySelector(".android");
       android.style.display = "block";
 
       window.location.href = "https://bit.ly/46Ygn70";
     }
     if (
-      isWindows == false &&
-      isAndroid == false &&
-      isiPad == false &&
-      isiPhone == false
+      isWindows === false &&
+      isAndroid === false &&
+      isiPad === false &&
+      isiPhone === false
     ) {
       isOthers = true;
     }
-    if (isWindows == true || isOthers == true) {
+    if (isWindows === true || isOthers === true) {
       let windowsp = document.querySelector(".windowsp");
       let android = document.querySelector(".android");
       let apple = document.querySelector(".apple");
