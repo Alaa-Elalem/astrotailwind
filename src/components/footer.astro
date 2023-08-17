@@ -219,11 +219,11 @@ const social = await getCollection("social");
 
   <div class="flex flex-row w-full justify-center items-center">
     <span
-      class="lg: justify-center text-md pt-2 text-secondary dark:text-secondary ml-2 pl-1 border-white-300 dark:border-secondary py-1"
+      class="lg: justify-center text-lg py-2 pt-2 text-secondary dark:text-secondary ml-2 pl-1 border-white-300 dark:border-secondary my-1"
     >
       شركة دراهم للوساطة و التجارة الالكترونية © {new Date().getFullYear()}
     </span>
-    <span class="max-md:hidden inline-flex lg:m-auto space-x-4 items-end">
+    <!-- <span class="max-md:hidden inline-flex lg:m-auto space-x-4 items-end">
       {
         social.map((s) =>
           s.data.link ? (
@@ -241,7 +241,7 @@ const social = await getCollection("social");
           )
         )
       }
-    </span>
+    </span> -->
   </div>
 
   <script is:inline>

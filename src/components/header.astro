@@ -10,7 +10,7 @@ import { Logo } from "../config";
     <div
       class="fixed z-50 mx-auto px-2 sm:px-6 lg:px-8 bg-primary dark:bg-gray-800 w-full border-b-2 border-secondary dark:border-secondary"
     >
-      <div class="relative flex items-center justify-between h-12">
+      <div class="lg:hidden relative flex items-center justify-between h-12">
         <div
           class="absolute left-0 flex items-center justify-between lg:hidden"
         >
@@ -119,9 +119,7 @@ import { Logo } from "../config";
           </div>
         </div>
       </div>
-      <div
-        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-      >
+      <div class="max-lg:hidden absolute top-2 left-0">
         <!-- <Search /> -->
         <Theme />
 
