@@ -135,18 +135,19 @@ const social = await getCollection("social");
           اعمالنا
         </a>
       </p>
-      <p
-        class="py-2 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
-      >
-        <a
-          href={import.meta.env.BASE_URL + " sitemap-index.xml"}
-          class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
-          rel="noopener noreferrer"
-          target="_blank"
+      <div class="menuf" data-name="f-2">
+        <p
+          class="py-2 mx-2 lg:mx-6 lg:px-8 text-sm text-gray-600 dark:text-gray-300"
         >
-          اتصل بنا
-        </a>
-      </p>
+          <a
+            class="text-lg text-secondary hover:text-blue-600 dark:text-secondary dark:hover:text-blue-300"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            اتصل بنا
+          </a>
+        </p>
+      </div>
     </div>
     <div class="flex basis-2/3 flex-col justify-start items-center -mt-3">
       <p
@@ -251,6 +252,11 @@ const social = await getCollection("social");
         description:
           "نحن هنا لنساعدك في تطوير اعمالك وتوسيع التجارة نوصلك لاهدافك بايسر الطرق واسرعها نؤمِن لك التعامل مع كل الاطراف الذين ترغب في اتمام الصفقات والتواصل  معهم نضعك على خارطة العالم للتعريف باعمالك وتنميتها وتطويرها.",
         pop: "f-1",
+      },
+      {
+        name: "اتصل بنا",
+        description: " 0916656699",
+        pop: "f-2",
       },
     ];
     document.querySelectorAll(" .menuf").forEach((product) => {

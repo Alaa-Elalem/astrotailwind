@@ -88,7 +88,7 @@ export const NavigationLinks = [
   { name: " من نحن", href: "#" },
   { name: "خدماتنا", href: "#serv" },
   { name: " اعمالنا", href: "#jobs" },
-  { name: "تواصل معنا", href: "contact" },
+  // { name: "تواصل معنا", href: "#" },
   {
     name: " نموذج طلب الخدمة",
     href: "https://docs.google.com/forms/d/e/1FAIpQLSd-dJWdJfnX2HQxJ4HkNuCbSLOi9SyzhLbScDEInoHuiKRIng/viewform?usp=sf_link",

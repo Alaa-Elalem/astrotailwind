@@ -167,6 +167,13 @@ import { Logo } from "../config";
                     ? "page"
                     : undefined
                 }
+                data-name={item.href == "#" && "f-2"}
+                aria-current={
+                  item.href.length > 0 &&
+                  Astro.url.toString().includes(item.href)
+                    ? "page"
+                    : undefined
+                }
               >
                 {item.name}
               </a>
