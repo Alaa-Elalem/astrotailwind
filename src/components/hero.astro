@@ -4,7 +4,7 @@ import { LogoImage, FeaturedSVG } from "../config";
 
 <main>
   <div
-    class="container mx-auto max-w-7xl flex flex-col space-x-10 md:flex-row bg-white"
+    class="container mx-auto max-w-7xl flex flex-col space-x-10 md:flex-row bg-white dark:bg-gray-900"
   >
     <div class="mx-auto md:w-1/2 lg:w-full flex justify-center">
       <div class="flex justify-center items-center dark:text-gray-900">
@@ -242,39 +242,16 @@ import { LogoImage, FeaturedSVG } from "../config";
     stroke: black;
     /* stroke-dasharray: 395; */
     stroke-dasharray: 215;
-    animation: draw 4s linear;
+    animation: draw 2s linear;
     /* animation-delay: 2s; */
   }
   @keyframes draw {
     0% {
       stroke-dashoffset: -215;
-      /* stroke-dashoffset: -395; */
-      /* stroke: navy; */
       fill: none;
       stroke: black;
-      /* animation-delay: 1s; */
     }
 
-    /* 5% {
-      stroke-dashoffset: -370;
-      stroke: navy;
-    } */
-    /* 50% {
-      stroke-dashoffset: -200;
-      /* fill: #f0c986; */
-    /* stroke: #0f3548;
-      fill: #0f3548; */
-    /* fill: none; */
-    /* } */
-    /* 80% {
-      stroke-dashoffset: -100;
-      
-      fill: none;
-    } */
-    /* 80% {
-      stroke-dashoffset: -50;
-            fill: none;
-    } */
     55% {
       stroke-dashoffset: 5;
       box-shadow: 0 0 2px #8ff;
@@ -307,101 +284,15 @@ import { LogoImage, FeaturedSVG } from "../config";
       stroke-width: px;
     }
   }
-
-  /* .dark svg text {
-    animation: stroke 6s infinite alternate;
-    stroke-width: 2;
-    stroke: #f0c986;
-    animation-delay: 2s;
-    font-size: 140px;
-    text-shadow: 0 0 10px #f0c986;
-    box-shadow: 0 0 2px #f0c986;
-  }
-  .dark{ @keyframes stroke {
-    0% {
+  :is(.dark) {
+    .cls-1,
+    .cls-2 {
       fill: #f0c986;
       stroke: #f0c986;
-      stroke-dashoffset: 25%;
-      stroke-dasharray: 0 50%;
-      stroke-width: 2;
-      filter: hue-rotate(0deg);
+      stroke-dasharray: 215;
+      animation: draw 2s linear;
     }
-
-    70% {
-      fill: rgba(72, 138, 20, 0);
-      stroke: rgba(54, 95, 160, 1);
-    }
-    80% {
-      fill: rgba(72, 138, 20, 0);
-      stroke: rgba(54, 95, 160, 1);
-      stroke-width: 3;
-    }
-    100% {
-      fill: #f0c986;
-      stroke: #f0c986;
-      stroke-dashoffset: -25%;
-      stroke-dasharray: 50% 0;
-      stroke-width: 2;
-      filter: hue-rotate(360deg);
-    }} */
-  svg text {
-    /* text-transform: uppercase; */
-    /* animation: stroke 6s infinite alternate;
-    stroke-width: 2;
-    stroke: #0f3548;
-    animation-delay: 2s;
-    font-size: 140px;
-    text-shadow: 0 0 5px #08364d; */
-    /* text-shadow: 0 0 15px #76c2e8;
-    text-shadow: 0 0 10px #4caedf; */
-    /* box-shadow: 0 0 7px #08364d; */
   }
-  /* @keyframes stroke {
-    0% {
-      fill: #0f3548;
-      stroke: #0f3548;
-      stroke-dashoffset: 25%;
-      stroke-dasharray: 0 50%;
-      stroke-width: 2;
-      filter: hue-rotate(0deg);
-    }
-
-    70% {
-      fill: rgba(72, 138, 20, 0);
-      stroke: rgba(54, 95, 160, 1);
-    }
-    80% {
-      fill: rgba(72, 138, 20, 0);
-      stroke: rgba(54, 95, 160, 1);
-      stroke-width: 3;
-    }
-    100% {
-      fill: #0f3548;
-      stroke: #0f3548;
-      stroke-dashoffset: -25%;
-      stroke-dasharray: 50% 0;
-      stroke-width: 2;
-      filter: hue-rotate(360deg);
-    }
-  } */
-
-  /* .cls-1 {
-    fill: white;
-    fill-opacity: 0;
-    stroke: white;
-    stroke-width: 5;
-    stroke-linecap: round;
-
-    stroke-dasharray: 860;
-    stroke-dashoffset: 860;
-    animation: draw 2s linear forwards;
-  } */
-
-  /* @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  } */
 
   #texts {
     overflow: hidden;
