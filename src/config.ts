@@ -16,7 +16,7 @@ export const SiteMetadata = {
     name: "darahem",
     twitter: "@Darahem_ly",
     url: "https://darahem.ly",
-    email: "chris@christham.net",
+    email: "info@darahem.ly",
     summary: "موقع متخصص بخدمات الدفع الالكتروني ,والمنتجات الرقمية",
   },
   org: {
