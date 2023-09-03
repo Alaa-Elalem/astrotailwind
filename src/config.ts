@@ -13,23 +13,23 @@ export const SiteMetadata = {
   description:
     "شركة متخصصة في التجارة الالكترونية وقي تطوير بيئة عمل المواقع وتطبيقات الجوال",
   author: {
-    name: "Chris Tham",
+    name: "darahem",
     twitter: "@chris1tham",
     url: "https://christham.net",
     email: "chris@christham.net",
     summary: "Outrageous actualiser.",
   },
   org: {
-    name: "Hello Tham",
-    twitter: "@hellothamcom",
-    url: "https://hellotham.com",
-    email: "info@hellotham.com",
+    name: "Darahem Co",
+    twitter: "@darahem.ly",
+    url: "https://darahem.ly",
+    email: "info@darahem.ly",
     summary:
       "Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.",
   },
   location: "طرابلس ليبيا",
   latlng: [-33.86785, 151.20732] as [number, number],
-  repository: "https://github.com/hellotham/hello-astro",
+  repository: "",
   social: [
     {
       name: "Email",
@@ -53,12 +53,12 @@ export const SiteMetadata = {
     },
     {
       name: "Instagram",
-      link: "https://www.instagram.com/darahem.ly/",
+      link: https://www.instagram.com/406062//",
       icon: "instagram",
     },
     {
       name: "Twitter",
-      link: "https://twitter.com/hellothamcom",
+      link: "https://twitter.com/Darahem_ly",
       icon: "twitter",
     },
     // {
@@ -66,22 +66,27 @@ export const SiteMetadata = {
     //   link: "https://github.com/hellothamcom",
     //   icon: "github",
     // },
+    {
+      "name": "WhatsUp",
+      "link": "https://wa.me/+218916656699",
+      "icon": "whatsapp-outline"
+    },
+    {
+      "name": "tiktok",
+      "link": "https://www.tiktok.com/@darahem_ly",
+      "icon": "tiktok2"
+    },
   ],
   buildTime: new Date(),
 };
 
-// export const Logo = './assets/svg/astro/logomark-light.svg'
-// export const Logo = "./assets/favicon.svg";
-// export const LogoImage = "./assets/astro/full-logo-light.png";
-// export const FeaturedSVG = "./assets/svg/darahem/darahem.jpg";
-// export const DefaultSVG = "./assets/svg/undraw/undraw_my_feed.svg";
-// export const DefaultImage = "./assets/undraw/undraw_my_feed.png";
+
 
 export { default as Logo } from "./assets/favicon.svg";
 export { default as LogoImage } from "./assets/svg/darahem/darahem.svg";
 export { default as FeaturedSVG } from "./assets/svg/darahem/herepbg.svg";
-export { default as DefaultSVG } from "./assets/svg/undraw/undraw_my_feed.svg";
-export { default as DefaultImage } from "./assets/undraw/undraw_my_feed.png";
+export { default as DefaultSVG } from "./assets/svg/darahem/darahem.svg";
+export { default as DefaultImage } from "./assets/svg/darahem/darahem.jpg";
 
 export const NavigationLinks = [
   { name: "الصفحة الرئيسية", href: "/" },
@@ -132,18 +137,18 @@ export function categoryDetail(category: string | undefined) {
 }
 export const AuthorDetail = [
   {
-    name: "Chris Tham",
-    description: "Hello World",
-    contact: "chris@christham.net",
-    image: "./assets/authors/Chris Tham.jpg",
+    name: "darahem",
+    description: "Darahem Co",
+    contact: "info@darahem.ly",
+    image: "./assets/authors/darahem.jpg",
   },
 ];
 
 export const DefaultAuthor = {
-  name: "Hello Astro",
+  name: "darahem admin",
   image: "./assets/authors/default.png",
-  contact: "info@hellotham.com",
-  description: "Astronaut",
+  contact: "info@darahem.ly",
+  description: "darahem Co",
 };
 
 export function authorDetail(author: string | undefined) {
