@@ -14,18 +14,17 @@ export const SiteMetadata = {
     "شركة متخصصة في التجارة الالكترونية وقي تطوير بيئة عمل المواقع وتطبيقات الجوال",
   author: {
     name: "darahem",
-    twitter: "@chris1tham",
-    url: "https://christham.net",
+    twitter: "@Darahem_ly",
+    url: "https://darahem.ly",
     email: "chris@christham.net",
-    summary: "Outrageous actualiser.",
+    summary: "موقع متخصص بخدمات الدفع الالكتروني ,والمنتجات الرقمية",
   },
   org: {
     name: "Darahem Co",
     twitter: "@darahem.ly",
     url: "https://darahem.ly",
     email: "info@darahem.ly",
-    summary:
-      "Hello Tham is a boutique management consulting firm. We specialise in Business and IT strategies, operating models, strategic roadmaps, enterprise architecture, analytics and business process design.",
+    summary: "موقع متخصص بخدمات الدفع الالكتروني ,والمنتجات الرقمية",
   },
   location: "طرابلس ليبيا",
   latlng: [-33.86785, 151.20732] as [number, number],
