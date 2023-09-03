@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props
     <!-- <link href="/dist/output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta name="generator" content={Astro.generator} />
-    <!-- <SEO frontmatter={frontmatter} /> -->
+    <SEO frontmatter={frontmatter} />
     <script is:inline>
       if (
         localStorage.theme === 'dark' ||

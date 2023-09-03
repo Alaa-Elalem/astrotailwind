@@ -53,7 +53,7 @@ export const SiteMetadata = {
     },
     {
       name: "Instagram",
-      link: https://www.instagram.com/406062//",
+      link: "https://www.instagram.com/406062//",
       icon: "instagram",
     },
     {
@@ -67,20 +67,18 @@ export const SiteMetadata = {
     //   icon: "github",
     // },
     {
-      "name": "WhatsUp",
-      "link": "https://wa.me/+218916656699",
-      "icon": "whatsapp-outline"
+      name: "WhatsUp",
+      link: "https://wa.me/+218916656699",
+      icon: "whatsapp-outline",
     },
     {
-      "name": "tiktok",
-      "link": "https://www.tiktok.com/@darahem_ly",
-      "icon": "tiktok2"
+      name: "tiktok",
+      link: "https://www.tiktok.com/@darahem_ly",
+      icon: "tiktok2",
     },
   ],
   buildTime: new Date(),
 };
-
-
 
 export { default as Logo } from "./assets/favicon.svg";
 export { default as LogoImage } from "./assets/svg/darahem/darahem.svg";
